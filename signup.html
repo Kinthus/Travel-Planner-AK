@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Travels - Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+        .footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .social-icons a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div><strong>AK Travels</strong></div>
+        <nav>
+            <a href="home_page.html">Home</a>
+            <a href="package.html">Packages</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h1>Welcome to AK...!</h1>
+        <form action="sigup.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required="">
+            <input type="email" name="email" placeholder="email" required="">
+            <input type="password" name="password" placeholder="Password" required="">
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" required="">
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+    <footer class="footer">
+        <p>© 2024 Your Website. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

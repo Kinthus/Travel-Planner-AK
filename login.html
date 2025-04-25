@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Travels - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        input {
+            display: block;
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #444;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #888;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: black;
+            margin: 0 5px;
+            font-size: 1.2em;
+        }
+        .agreement {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div><strong>AK Travels</strong></div>
+        <div>
+            <a href="home_page.html">Home</a>
+            <a href="package.html">Packages</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Login for Plan your Marvellous Trip...!</h1>
+        <form id="loginForm" action="login.php" method="POST">
+            <input type="text"  id="username" name="username" placeholder="Username" required>
+            <input type="email"  id="email" name="email" placeholder="Email" required>
+            <input type="password"  id="password" name="password" placeholder="Password" required>
+            <button type="submit" class="button">Log in</button>
+        </form>
+        <div class="agreement">
+            By log in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </div>
+    </div>
+    <div class="footer">
+        <span>© 2024 Your Website. All rights reserved.</span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </div>
+    <div class="social-icons">
+        <a href="#">&#xf16d;</a>
+        <a href="#">&#xf09a;</a>
+        <a href="#">&#xf099;</a>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            
+            event.preventDefault();
+
+           
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+          
+            if (username.length < 3) {
+                alert('Username must be at least 3 characters long.');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+
+            
+            alert('Login successful!');
+            
+        });
+    </script>
+</body>
+</html>

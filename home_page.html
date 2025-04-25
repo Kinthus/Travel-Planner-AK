@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Travels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('K.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .logo {
+  background-image: url('AKlogo.jpeg');
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 50px;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: fadeIn 2s ease-in;
+        }
+        h1 {
+            font-size: 75px;
+            margin: 4px 0;
+            animation: slideDown 2s ease-in-out;
+        }
+        p {
+            font-size: 30px;
+            color: black;
+            margin: 10px 0;
+            animation: fadeIn 3s ease-in;
+        }
+        .button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 50px 0;
+            animation: popUp 2s ease-in-out;
+        }
+        .button:hover {
+            background-color: black;
+            margin-top: 30px;
+        }
+        .signup {
+            margin-top: 50px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #ccc;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            margin: 0 5px;
+            font-size: 1.2em;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popUp {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="navbar">
+            <div class="logo">
+                <!--<img src="AKlogo.jpeg" alt="Your Logo" style="width: 100px; height: auto;">-->
+            </div>
+            <div><strong>AK Travels</strong></div>
+            <div>
+                <a href="home_page.html">Home</a>
+                <a href="package.html">Packages</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Plan Your Trip With AK...!</h1>
+            <p>Don’t spend your money on things. Spend it on experiences!</p>
+            <button class="button"><a href="login.html" style="color: white; text-decoration: none;">Log in</a></button>
+            <div class="signup">
+                If You're a new Customer, <a href="signup.html">sign up</a> 
+            </div>
+        </div>
+        <div class="footer">
+            <span>© 2024 Your Website. All rights reserved.</span>
+            <a href="#" style="color: black;">Privacy Policy</a>
+            <a href="#" style="color: black;">Terms of Service</a>
+        </div>
+        <div class="social-icons">
+            <a href="#">&#xf16d;</a>
+            <a href="#">&#xf09a;</a>
+            <a href="#">&#xf099;</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', () => {
+                    button.style.transform = 'scale(1.1)';
+                    button.style.transition = 'transform 0.2s';
+                });
+
+                button.addEventListener('mouseout', () => {
+                    button.style.transform = 'scale(1)';
+                });
+            });
+
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.color = '#978a1b';
+                    link.style.transition = 'color 0.3s';
+                });
+
+                link.addEventListener('mouseout', () => {
+                    link.style.color = 'white';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
